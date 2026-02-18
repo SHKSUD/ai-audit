@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | AI Trust Authority</title>
+    <meta name="description" content="{{ page.meta_desc }}">
+    
+    <link rel="canonical" href="{{ page.url }}">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.meta_desc }}">
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:type" content="article">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ page.title }}",
+      "dateModified": "{{ page.last_mod }}",
+      "description": "{{ page.meta_desc }}",
+      "author": {"@type": "Organization", "name": "YMK Digital"}
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>... Nav Bar ...</header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>... Sitemap Link ...</footer>
+</body>
+</html>

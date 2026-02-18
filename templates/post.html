@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | AI Trust Authority</title>
+    <meta name="description" content="{{ page.meta_desc }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00b9ff; /* Wise Blue */
+            --dark: #161c2d;
+            --text: #5d7079;
+            --light-bg: #f8fafc;
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); margin: 0; background: #fff; }
+        
+        /* Navbar Styles */
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .brand { font-weight: 800; color: var(--primary); text-decoration: none; font-size: 1.3rem; letter-spacing: -0.5px; }
+        .nav-links { display: flex; list-style: none; margin: 0; padding: 0; }
+        .nav-links li { margin-left: 30px; position: relative; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; }
+        
+        /* Dropdown Logic */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            padding: 10px 0;
+        }
+        .dropdown-content a {
+            padding: 10px 20px;
+            display: block;
+            font-weight: 400;
+            color: var(--text);
+        }
+        .dropdown-content a:hover { background: var(--light-bg); color: var(--primary); }
+        .dropdown:hover .dropdown-content { display: block; }
+        .drop-arrow { font-size: 0.7rem; margin-left: 4px; vertical-align: middle; }
+
+        /* Main Content */
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        h1 { font-size: 2.8rem; margin-bottom: 15px; letter-spacing: -1px; }
+        .meta { color: var(--text); margin-bottom: 40px; font-size: 0.9rem; }
+        .content { font-size: 1.2rem; color: #334155; }
+        
+        /* The Card Widget */
+        .widget { background: var(--light-bg); border-radius: 16px; padding: 32px; margin: 40px 0; border: 1px solid #eef2f6; }
+        .widget-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .item { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .item label { display: block; font-size: 0.75rem; color: var(--text); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+        .item span { font-weight: 700; color: var(--primary); }
+
+        .cta-box { background: var(--dark); color: #fff; border-radius: 20px; padding: 50px; text-align: center; margin-top: 60px; }
+        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 16px 36px; border-radius: 10px; text-decoration: none; font-weight: 700; margin-top: 20px; transition: 0.2s; }
+        .btn:hover { background: #0098d4; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand">AI TRUST</a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Solutions <span class="drop-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        {% for cat in categories %}
+                        <a href="#">{{ cat }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#" style="color: var(--primary);">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <h1>{{ page.title }}</h1>
+            <div class="meta">Published: {{ page.last_mod }} • 8 min read</div>
+            
+            <div class="content">{{ page.content | safe }}</div>
+
+            {% if page.comparison %}
+            <div class="widget">
+                <h3 style="margin:0">📊 Key Service Insights</h3>
+                <div class="widget-grid">
+                    {% for key, value in page.comparison.items() %}
+                    <div class="item">
+                        <label>{{ key }}</label>
+                        <span>{{ value }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="cta-box">
+                <h2>Ready to automate your trust?</h2>
+                <p>Join 400+ AI startups securing their future.</p>
+                <a href="{{ page.cta_link }}" class="btn">Get Started Now</a>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
+    

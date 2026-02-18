@@ -1,0 +1,116 @@
+.comparison-widget {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.comp-item {
+    display: flex;
+    flex-direction: column;
+}
+.comp-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 700;
+}
+.comp-value {
+    font-size: 1.1rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-secondary {
+    background: #10b981;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+/* --- Comparison Widget Styles --- */
+.comparison-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.comparison-box h4 {
+    margin-top: 0;
+    color: #1a202c;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comparison-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed #edf2f7;
+}
+
+.comparison-item:last-child {
+    border-bottom: none;
+}
+
+.comparison-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.comparison-value {
+    font-family: 'Inter', sans-serif;
+    background: #f7fafc;
+    color: #2b6cb0; /* Professional "Trust" Blue */
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+/* Highlight the "Winner/Verdict" row */
+.comparison-item.verdict {
+    background: #ebf8ff;
+    margin: 0 -1.5rem;
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0 0 12px 12px;
+}
+
+.comparison-item.verdict .comparison-value {
+    background: #3182ce;
+    color: #ffffff;
+    border: none;
+}

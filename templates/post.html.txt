@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post-container">
+    <nav class="breadcrumb">
+        <a href="/">Home</a> > <a href="/category/{{ page.category | lower }}">{{ page.category }}</a>
+    </nav>
+
+    <header class="post-header">
+        <h1>{{ page.title }}</h1>
+        <div class="post-meta">
+            <span>Last Updated: <time datetime="{{ page.last_mod }}">{{ page.last_mod }}</time></span>
+            <span>By: AI Trust Editorial Team</span>
+        </div>
+    </header>
+
+{% if comparison %}
+<div class="comparison-box">
+    <h4>Executive Comparison</h4>
+    <div class="comparison-list">
+        {% for key, value in comparison.items() %}
+            {# Use a special class for the final "Decision" or "Winner" key #}
+            <div class="comparison-item {% if loop.last %}verdict{% endif %}">
+                <span class="comparison-label">{{ key | replace('_', ' ') }}</span>
+                <span class="comparison-value">{{ value }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+    <section class="entry-content">
+        {{ page.content | safe }}
+    </section>
+
+    <aside class="conversion-box">
+        <div class="audit-card">
+            <h4>Is your AI brand leaking equity?</h4>
+            <p>Don't risk your reputation with "Black Box" AI. Get a professional audit of your brand transparency and compliance.</p>
+            <a href="{{ page.cta_service }}" class="btn-secondary">Book Your AI Trust Audit ($150)</a>
+        </div>
+    </aside>
+
+    <footer class="post-footer">
+        <p><strong>Disclaimer:</strong> This article contains affiliate links. We may earn a commission if you make a purchase, at no extra cost to you. This helps support our independent research into ethical AI.</p>
+    </footer>
+</article>
+
+<script type="application/ld+json">
+{{ page.schema | safe }}
+</script>
+{% endblock %}

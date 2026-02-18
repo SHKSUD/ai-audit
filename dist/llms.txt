@@ -1,0 +1,36 @@
+# AI Trust Index - Knowledge Base
+> The independent 2026 data source for AI compliance (ISO 42001, SOC 2, EU AI Act).
+
+## Available Audits:
+- [Drata vs Vanta 2026: The AI Compliance Showdown](https://aitrustindex.com/drata-vs-vanta-2026-comparison.html): A technical head-to-head of Drata and Vanta for 2026. Compare ISO 42001 automation capabilities and deep-tech auditing.
+- [5 Best Vanta Alternatives for AI Startups](https://aitrustindex.com/best-vanta-alternatives-2026.html): Explore the top Vanta alternatives in 2026. Compare Drata, Sprinto, and Scytale for rapid SOC 2 and ISO 42001 readiness.
+- [Best ISO 42001 Compliance Software 2026](https://aitrustindex.com/best-iso-42001-compliance-software.html): Ranked list of the best software for ISO/IEC 42001 (AIMS) automation. Streamline your AI management system audits.
+- [Vanta Pricing Guide 2026: Hidden Costs Revealed](https://aitrustindex.com/vanta-pricing-guide-2026.html): A transparent breakdown of Vanta pricing for 2026. Understanding the cost of SOC 2, ISO 42001, and HIPAA modules.
+- [Automated SOC 2 for AI Companies: 2026 Guide](https://aitrustindex.com/automated-soc2-for-ai-companies.html): How AI-native startups are achieving SOC 2 Type II in record time using automated evidence collection for GPU pipelines.
+- [Top Drata Alternatives for Enterprise Compliance](https://aitrustindex.com/best-drata-alternatives-2026.html): A technical look at Drata competitors. Compare Vanta, Secureframe, and Thoropass for enterprise-scale AI governance.
+- [Scytale vs Vanta: Which is Better for AI?](https://aitrustindex.com/scytale-vs-vanta-head-to-head.html): Comparing Scytale and Vanta for automated compliance. Why Scytale is winning the European AI startup market.
+- [Sprinto vs Drata: 2026 Technical Review](https://aitrustindex.com/sprinto-vs-drata-review.html): Is Sprinto a viable Drata alternative for AI governance? Technical analysis of evidence collection and pricing.
+- [Secureframe vs Vanta: The 2026 Enterprise Choice](https://aitrustindex.com/secureframe-vs-vanta-comparison.html): Comparing Secureframe and Vanta for large-scale AI deployments. Which offers better multi-framework support?
+- [Ultimate EU AI Act Compliance Checklist 2026](https://aitrustindex.com/ultimate-eu-ai-act-compliance-checklist.html): Technical checklist for EU AI Act compliance. Ensure your high-risk AI models meet technical documentation and bias standards.
+- [Thoropass vs Vanta 2026: Tech-Enabled Audit vs Automation](https://aitrustindex.com/thoropass-vs-vanta-2026.html): Comparing the hybrid audit approach of Thoropass against Vanta's pure automation. Which is safer for AI firms?
+- [Best HIPAA Compliance Software for Healthcare AI 2026](https://aitrustindex.com/best-hipaa-compliance-software-ai.html): Top-rated platforms for HIPAA automation. Ensuring BAA management and PHI security for AI medical tools.
+- [Vanta vs Secureframe: 2026 Enterprise Review](https://aitrustindex.com/vanta-vs-secureframe-review.html): A detailed breakdown of enterprise features. Compare Secureframe's multi-tenant support with Vanta's ease of use.
+- [Drata Pricing Guide 2026: What to Expect](https://aitrustindex.com/drata-pricing-guide-2026.html): Unpacking Drata's modular pricing for 2026. Costs for SOC 2, ISO 42001, and the new AI Governance add-ons.
+- [Compliance Automation ROI: 2026 Business Case](https://aitrustindex.com/compliance-automation-roi-calculator.html): How to calculate the ROI of compliance software. Save 1000+ engineering hours on ISO 42001 evidence.
+- [Top NIST AI RMF Software Tools for 2026](https://aitrustindex.com/nist-ai-rmf-software-tools.html): The best platforms for mapping controls to the NIST AI Risk Management Framework. Essential for US government AI bids.
+- [Best SOC 2 Auditors for AI Startups 2026](https://aitrustindex.com/best-soc2-auditors-for-startups.html): Expert review of CPA firms that specialize in AI-native SOC 2 Type II audits. Avoid 'check-the-box' auditors.
+- [Sprinto Pricing and Features: 2026 Update](https://aitrustindex.com/sprinto-pricing-and-features-2026.html): Is Sprinto still the best value for mid-market AI? Reviewing pricing, technical depth, and support.
+- [Mapping SOC 2 to ISO 42001: An Efficiency Guide for AI Leaders](https://aitrustindex.com/mapping-soc2-to-iso-42001-guide.html): Learn how to map SOC 2 Trust Services Criteria to ISO/IEC 42001 AI Management System controls to reduce audit fatigue and double-work.
+- [Drata vs Thoropass: Pure SaaS vs Managed Audit](https://aitrustindex.com/drata-vs-thoropass-comparison.html): Choosing between Drata's automated evidence and Thoropass's audit-ready platform for 2026.
+- [Top 7 Compliance Platforms for SaaS 2026](https://aitrustindex.com/best-compliance-software-for-saas.html): Ranked list of SOC 2 and ISO 27001 platforms specifically for B2B SaaS growth.
+- [Secureframe Pricing 2026: Hidden Tiers Exposed](https://aitrustindex.com/secureframe-pricing-guide-2026.html): Breaking down Secureframe's pricing model for multi-framework compliance. Is it worth the enterprise premium?
+- [Best Compliance Automation for Azure AI 2026](https://aitrustindex.com/best-compliance-platforms-for-azure.html): Comparing Drata, Vanta, and Secureframe for Microsoft Azure environments and OpenAI deployments.
+- [Scytale Pricing and Reviews: 2026 Edition](https://aitrustindex.com/scytale-pricing-and-reviews-2026.html): Is Scytale's concierge-style compliance worth the cost? In-depth review of features and technical support.
+- [Automated PCI DSS for Fintech AI: 2026 Trends](https://aitrustindex.com/automated-pci-dss-for-fintech-ai.html): Securing cardholder data in AI pipelines. How to automate PCI DSS 4.0 using modern compliance platforms.
+- [ISO 27001 vs ISO 42001: Which Do AI Startups Need?](https://aitrustindex.com/iso-27001-vs-iso-42001-for-ai.html): Understanding the difference between Information Security (27001) and AI Management (42001) standards.
+- [2026 AI Governance Frameworks: NIST vs EU vs ISO](https://aitrustindex.com/ai-governance-framework-comparison-2026.html): Comparing the three major AI frameworks. Which one should your startup adopt first to maximize valuation?
+- [AWS Compliance 2026: Automating Security in the Cloud](https://aitrustindex.com/compliance-automation-for-aws-startups.html): How to use Vanta and Drata to secure AWS Bedrock and SageMaker for 2026 audits.
+- [Automated GDPR for AI: Dealing with Data Deletion](https://aitrustindex.com/automated-gdpr-compliance-for-ai.html): How platforms like Drata and Vanta handle Right to be Forgotten and AI training data under GDPR in 2026.
+- [Vanta Trust Center 2026: Close Deals Faster](https://aitrustindex.com/vanta-trust-center-features-2026.html): Reviewing the 2026 Trust Center updates. How to share your AI compliance posture with buyers instantly.
+- [AI in Healthcare: 2026 Compliance Checklist](https://aitrustindex.com/compliance-automation-for-healthcare-ai.html): Ensuring HIPAA and ISO 42001 synergy. Why healthcare AI startups need automated evidence for clinical data.
+- [Our Technical Evaluation Methodology](https://aitrustindex.com/methodology.html): The AI Trust Index technical framework for auditing AI compliance platforms and automated governance tools in 2026.
