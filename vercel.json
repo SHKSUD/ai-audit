@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "buildCommand": "python generate.py",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
