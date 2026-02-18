@@ -100,7 +100,6 @@ def parse_bento_data(raw_col, raw_intro):
     """Smart parser that extracts comparison data and builds the Bento Grid HTML."""
     data = {}
     
-    # Extract from CSV_COMPARISON_DATA tag if present in intro text
     if "CSV_COMPARISON_DATA:" in str(raw_intro):
         try:
             tag_string = str(raw_intro).split("CSV_COMPARISON_DATA:")[1].strip().strip('"').strip("'")
@@ -111,7 +110,6 @@ def parse_bento_data(raw_col, raw_intro):
                     data[k.strip()] = v.strip()
         except: pass
         
-    # Build HTML
     if not data: return ""
     
     html = '<div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-12">'
@@ -129,7 +127,7 @@ def get_related_articles(df, current_slug, category):
     """Finds 3 related articles from the same category for the Internal Linking Loop."""
     related = df[(df['category'] == category) & (df['slug'] != current_slug)]
     if len(related) < 3:
-        related = df[df['slug'] != current_slug] # Fallback to any category
+        related = df[df['slug'] != current_slug] 
     
     related = related.head(3)
     
@@ -192,12 +190,8 @@ def build_site():
     if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
     
     try:
-        # 1. Robust Data Loading with Encoding Fallback
-        try:
-            df = pd.read_csv("database.csv", skipinitialspace=True, engine='python', encoding='utf-8').fillna("")
-        except UnicodeDecodeError:
-            print("⚠️ UTF-8 decoding failed. Falling back to cp1252 (Windows) encoding...")
-            df = pd.read_csv("database.csv", skipinitialspace=True, engine='python', encoding='cp1252').fillna("")
+        # 1. Robust Data Loading forcing strict UTF-8 with error replacement
+        df = pd.read_csv("database.csv", skipinitialspace=True, engine='python', encoding='utf-8', encoding_errors='replace').fillna("")
         
         # 2. HOMEPAGE GENERATION
         cards = ""
@@ -276,7 +270,6 @@ def build_site():
             canonical = f"{DOMAIN}/{row['slug']}.html"
             schema = generate_schema(row, canonical)
             
-            # Clean text (strip out the raw tag)
             clean_text = str(row['intro_text']).split("CSV_COMPARISON_DATA:")[0].strip()
             bento_grid_html = parse_bento_data(row['comparison_data'], row['intro_text'])
             related_html = get_related_articles(df, row['slug'], row['category'])
@@ -351,17 +344,17 @@ def build_site():
         for pg in ['index.html', 'privacy.html', 'terms.html'] + [f"{s}.html" for s in df['slug']]:
             sitemap += f'  <url><loc>{DOMAIN}/{pg}</loc><lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod></url>\n'
         sitemap += '</urlset>'
-        with open(f"{OUTPUT_DIR}/sitemap.xml", "w") as f: f.write(sitemap)
+        with open(f"{OUTPUT_DIR}/sitemap.xml", "w", encoding="utf-8") as f: f.write(sitemap)
         
         # Robots.txt
         robots = f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n"
-        with open(f"{OUTPUT_DIR}/robots.txt", "w") as f: f.write(robots)
+        with open(f"{OUTPUT_DIR}/robots.txt", "w", encoding="utf-8") as f: f.write(robots)
 
         # llms.txt (For AI Search Engines)
         llms_content = f"# {BRAND_NAME} - Knowledge Base\n> The independent 2026 data source for AI compliance (ISO 42001, SOC 2, EU AI Act).\n\n## Available Audits:\n"
         for _, row in df.iterrows():
             llms_content += f"- [{row['title']}]({DOMAIN}/{row['slug']}.html): {row['meta_desc']}\n"
-        with open(f"{OUTPUT_DIR}/llms.txt", "w") as f: f.write(llms_content)
+        with open(f"{OUTPUT_DIR}/llms.txt", "w", encoding="utf-8") as f: f.write(llms_content)
 
         # Legal
         for l in ['privacy', 'terms']:
@@ -372,7 +365,7 @@ def build_site():
         print(f"✅ V1.6.1 Build Complete: {len(df)} Pages Built with Encoding Fallback!")
         
     except Exception as e:
-        with open(ERROR_LOG, "w") as f: f.write(traceback.format_exc())
+        with open(ERROR_LOG, "w", encoding="utf-8") as f: f.write(traceback.format_exc())
         print(f"❌ Error logged to {ERROR_LOG}")
 
 if __name__ == "__main__":
