@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "python generate.py",
+  "buildCommand": "pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt && python generate.py",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false
