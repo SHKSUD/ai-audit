@@ -1,0 +1,4 @@
+Why these two?
+pandas: This is required to read your database.csv file and handle the data rows.
+
+Jinja2: This is the engine that takes your HTML templates and injects the data from the CSV to create your individual pages.
