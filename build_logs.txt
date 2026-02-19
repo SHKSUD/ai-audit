@@ -1,0 +1,15 @@
+21:41:47.522 Running build in Washington, D.C., USA (East) – iad1
+21:41:47.522 Build machine configuration: 2 cores, 8 GB
+21:41:47.636 Cloning github.com/SHKSUD/ai-audit (Branch: main, Commit: 9c4bf66)
+21:41:47.636 Previous build caches not available.
+21:41:47.918 Cloning completed: 282.000ms
+21:41:48.284 Running "vercel build"
+21:41:48.903 Vercel CLI 50.18.2
+21:41:50.505 error: externally-managed-environment
+21:41:50.506 
+21:41:50.506 × This environment is externally managed
+21:41:50.507 ╰─> This Python installation is managed by uv and should not be modified.
+21:41:50.507 
+21:41:50.507 note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+21:41:50.507 hint: See PEP 668 for the detailed specification.
+21:41:50.558 Error: Command "pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt && python generate.py" exited with 1
