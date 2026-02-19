@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "installCommand": "pip install -r requirements.txt",
-  "buildCommand": "python3.12 generate.py",
+  "buildCommand": "python generate.py",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false
