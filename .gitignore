@@ -1,20 +1,5 @@
-# Python filters
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-
-# Vercel build output (CRITICAL: Do not upload this)
 dist/
-
-# Local logs or error reports
-*.log
 error_report.txt
-
-# OS generated files
 .DS_Store
-Thumbs.db
